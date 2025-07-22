@@ -14,7 +14,7 @@ const ServiceCard = ({ index, title, icon }) => {
       className="xs:w-[250px] w-full"
     >
       <motion.div
-        variants={fadeIn('up', 'spring', index * 0.5 * index, 0.75)}
+        variants={fadeIn('up', 'spring', Math.log(index + 1) * 0.5, 0.75)}
         className=' w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
       >
         <div
@@ -37,8 +37,9 @@ const About = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>
-          <h2 className={styles.sectionHeadText}>Overview.</h2>
+          Introduction
         </p>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
 
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
